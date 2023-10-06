@@ -104,6 +104,8 @@ switch (data.weather[0].main){
   case 'Thunderstorm':
     icon = <IoMdThunderstorm/>
     break;
+    default:
+      icon = <IoMdSunny className='text-[#ffde33]'/>
 }
 
 const date = new Date();
@@ -203,21 +205,16 @@ const date = new Date();
               <div className='text-[20px]'>
                 <BsWind/>
               </div>
-              
+
               <div>
                Wind <span className='ml-2'>{data.wind.speed} m/s</span>
               </div>
             </div>
           </div>
         </div>
-    </div>)
-      }
-     
+    </div>)}
     </div>
   </div>;
-
-
-
 };
 
 export default App;
